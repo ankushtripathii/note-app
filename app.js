@@ -5,7 +5,6 @@ addBtn.addEventListener("click", function () {
   addNote();
 });
 const saveNotes = () => {
-  //data from text area
   const notes = document.querySelectorAll(".note textarea");
 
   const data = [];
@@ -16,7 +15,6 @@ const saveNotes = () => {
   if (data.length === 0) {
     localStorage.removeItem("notes");
   } else {
-    //storing data in localstorage
     localStorage.setItem("notes", JSON.stringify(data));
   }
 };
